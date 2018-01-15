@@ -25,4 +25,3 @@ focux.within(element) // true || false
 ## compatibility
 
 - [ES5+](https://caniuse.com/#feat=es5)
-- uses [`Node.contains`](https://developer.mozilla.org/en-US/docs/Web/API/Node/contains#Browser_compatibility)
