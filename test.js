@@ -27,7 +27,8 @@ if (typeof document == "undefined") {
     })
   }
 
-  // useCapture=true so that stopPropagation within has no effect
+  // https://github.com/ryanve/focux/pull/1
+  // useCapture=true to track anywhere in document
   document.addEventListener("focus", report, true)
   document.addEventListener("blur", report, true)
   report()
