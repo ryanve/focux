@@ -1,0 +1,37 @@
+{
+  "name": "focux",
+  "version": "0.0.0",
+  "description": "Detect :focus-within for better UX",
+  "author": "Ryan Van Etten",
+  "license": "CC0-1.0",
+  "main": "focux.js",
+  "scripts": {
+    "test": "npm-run-all --parallel test:html test:lint test:node",
+    "test:html": "html-validator --file=index.html --verbose",
+    "test:lint": "eslint .",
+    "test:node": "node test"
+  },
+  "homepage": "https://github.com/ryanve/focux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanve/focux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanve/focux/issues"
+  },
+  "keywords": [
+    "accessibility",
+    "focus-within",
+    "javascript",
+    "selector",
+    "matches",
+    "focus",
+    "a11y",
+    "ux"
+  ],
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "html-validator-cli": "^3.2.0",
+    "npm-run-all": "^4.1.2"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="utf-8">
+<title>focux: focus experience helpers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JavaScript module able to detect :focus-within">
+<link rel="stylesheet" href="https://unpkg.com/preset.css@0.2.0/preset.css">
+<style>
+  html { background: DimGray; color: WhiteSmoke; font: caption }
+  .able { background: Navy; color: WhiteSmoke; font-weight: 500 }
+  * { border: .25rem dashed transparent }
+  :focus-within { background: DeepPink; border-color: Pink }
+  .focux-within { background: DarkOrchid; border-color: Purple }
+  :focus-within { border-style: double }
+  :focus { background: Gold; color: Black; outline-color: Teal }
+  .m-auto { margin: auto }
+  .m-flow { margin: auto auto 1rem }
+  .m-wrap { margin: auto .25rem .5rem auto }
+  .inline-root { display: inline-block }
+  .pad { padding: .5em }
+  .plush { padding: 1em }
+  .bold { font-weight: bold }
+</style>
+
+<header class="m-auto pad">
+  <h1 class="m-flow">focux</h1>
+  <a class="able pad inline-root m-wrap" href="https://github.com/ryanve/focux">Github</a>
+  <a class="able pad inline-root m-wrap" href="https://www.npmjs.com/package/focux">npm</a>
+</header>
+
+<figure class="m-flow pad">
+  <figcaption class="bold m-flow">Elements for testing. Tab or click thru the page to test.</figcaption>
+  <fieldset class="preset-box">
+    <a href="#stay" class="able preset-button pad m-wrap">a</a>
+    <button class="able preset-button pad m-wrap" type="button">button</button>
+    <button class="able preset-button pad m-wrap" type="button" tabindex="-1">tabindex=-1</button>
+    <div class="able preset-button pad m-wrap" tabindex="0">tabindex=0</div>
+    <input class="able preset-input pad m-wrap" value="input">
+  </fieldset>
+</figure>
+
+<div role="status" class="m-flow pad">
+  <figure class="m-auto pad">
+    <figcaption class="pad bold">:focus-within</figcaption>
+    <span class="pad" data-report="native">?</span>
+  </figure>
+  <figure class="m-auto pad">
+    <figcaption class="pad bold">.focux-within</figcaption>
+    <span class="pad" data-report="module">?</span>
+  </figure>
+  <figure class="m-auto pad">
+    <figcaption class="pad bold">:focus</figcaption>
+    <span class="pad" data-report="focus">?</span>
+  </figure>
+  <figure class="m-auto pad">
+    <figcaption class="pad bold"><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-document-activeelement">activeElement</a></figcaption>
+    <span class="pad" data-report="target">?</span>
+  </figure>
+  <figure class="m-auto pad">
+    <figcaption class="pad bold">stamp</figcaption>
+    <span class="pad" data-report="stamp">?</span>
+  </figure>
+</div>
+
+<script src="focux.js"></script>
+<script src="test.js"></script>
