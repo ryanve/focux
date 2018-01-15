@@ -28,7 +28,7 @@ if (typeof document == "undefined") {
   }
 
   // useCapture=true so that stopPropagation within has no effect
-  document.addEventListener("focusin", report, true)
-  document.addEventListener("focusout", report, true)
+  document.addEventListener("focus", report, true)
+  document.addEventListener("blur", report, true)
   report()
 }
