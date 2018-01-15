@@ -9,8 +9,8 @@
     var owner = node.ownerDocument
     var target = owner.activeElement
     if (target === owner || target === owner.body) return false
-    if (target === node) return true
-    return !!node.querySelector(":focus")
+    if (!owner.querySelector(":focus")) return false
+    return target === node || !!node.querySelector(":focus")
   }
 
   function define(key, value) {
