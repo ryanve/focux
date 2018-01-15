@@ -19,7 +19,7 @@ if (typeof document == "undefined") {
     data.target = document.activeElement.nodeName
     data.native = document.querySelectorAll(":focus-within").length
     data.module = document.querySelectorAll(".focux-within").length
-    data.event = ev.type
+    data.event = ev ? ev.type : "?"
     data.stamp = Date.now()
     some.call(document.querySelectorAll("[data-report]"), function(node) {
       const type = node.dataset.report
