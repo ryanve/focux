@@ -10,7 +10,7 @@
     var target = owner.activeElement
     if (target === owner || target === owner.body) return false
     if (target === node) return true
-    return node.contains(target)
+    return !!node.querySelector(":focus")
   }
 
   function define(key, value) {
